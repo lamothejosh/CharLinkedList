@@ -1,0 +1,123 @@
+(A) The title of the homework and the author’s name 
+
+     CharLinkedList by Josh Lamothe 
+     6/9/2022
+
+(B) The purpose of the program.
+
+     The purpose of this program is to create and define a 
+    class called CharLinkedList, and also include member functions to 
+    maniupulate the characters in this list.
+
+(C) Acknowledgements for any help you received.
+
+     I recieved help from Professor Sheldon and his video lectures
+    I also recieved help from Professor Allen and his Lab02
+    I had help from CS11 proj2 on linked list with racko player
+	I had help from all the TAs and my class mates Timi and Alex
+
+(D) The files that you provided and a short description of what each file is 
+
+    CharLinkedList.cpp this file defines each member function and 
+    is the implementation of the CharLinkedList class
+
+    CharLinkedList.h this file is the header file that outlines the
+    interface of the CharLinkedList class
+
+    unit_tests.cpp this file was used to test the implementation
+    each member function was tested, and some of the private functions were
+    tested and commented out header
+
+    README- this file that outlines my program and gives the reader a brief 
+    intro to the program
+
+    MAKEFILE- compiles and links the CharLinkedList.cpp with the h file and the
+    testing file
+
+(E) How to compile and run your program.
+
+    in order to compile use the make test_list command in terminal
+    in order to run the program use ./test_list in order to run the
+    testing
+
+(F) An outline of the data structures and algorithms that you used. 
+
+    The data structure used in this situation was known as a linked list. 
+	Linked list are built by Nodes, which store data and 
+	pointers to the next node. Since this assignment is doubly 
+	linked there is also a pointer to the previous item in the list.
+	This is pretty nice because it allows for the front to be found
+	very easily however looping through the linked list is difficult.
+	Finding specific elements in the linked list is alot harder than with
+	array list. Linked list are also difficult to add in the middle 
+	and in pretty much any location because you have to link the pointers.
+
+	Q1:
+	Functions like concatenate and push at back were easier
+	as linked list because the only change was adding to the back. When dealing
+	with array list adding to the back causes you to have to expand the array. 
+	This is something that makes linked list easier. There is no max capacity 
+    of
+	the linked list which allow for linked list ot be easier in methods where 
+    elements are added to the list.
+
+	Q2:
+	Insert in order was a lot easier as an array list because it is easier
+	to access the specific data. This is the same with concatenate and first
+    and last. Functions that caused for the data inside the list to be 
+    accessed were easier with the array list method. 
+	
+	Q3:
+	In order to switch to a linked list code would have to be added to create 
+	nodes that store the data rather than an array. They also have to start 
+	creating more pointers, one that points to the front and ones in the node
+	that point to the previous and next thing of the list. 
+	In order to switch over a huge focus on linking the pointers will be done. 
+	The logic is very similar for the two data structors.
+
+
+
+(G) Details and an explanation of how you tested the various parts of assignment
+ and the program as a whole. 
+
+    in order to test I used all three constructors to make sure they made 
+    proper instances of the class.
+
+    This also tested my print function because I printed the contents after 
+    each time I used the constructor
+    after help from professor allen I realized that I used stringstream
+    in a way that would not test for empty chars so I fixed it
+    by using the str function rather than input streams.
+    
+
+ 
+
+  I next tested the size to see if this was working. Size was tested on empty 
+  and list that exist. Next first and last were tested as well. 
+  these were done on emptyand full list. 
+  A lot of the testing was very similar, calling the function to edit the data
+  and the printing out the list to see if the result would match expected 
+  output.
+
+  Here some edge cases were tested in order to make sure all scenarios worked
+  some of these test cases call error messages so they were commented out after
+
+  Pop from front and back were tested on empty list 
+  remove at was tested out of bounds 
+  element at was tested out of bounds
+  insert at was tested out of range
+
+
+ 
+
+  the copy constructor was tested next, and it was used again at the end 
+  to show the deep copy. this was done by manipulating the original and
+  seeing if this would affect the deep copies values.
+
+
+
+    the deconstructor was also tested through valgrind
+
+Timing:
+    I spent 35 hours on this assignment.Probably a little more than that.
+	I really needed help with the 3rd constructor. 
